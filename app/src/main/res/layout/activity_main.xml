@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,6 @@
     android:background="@color/bgActivity"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
 
     <ImageButton
         android:id="@+id/buttonTutor"
@@ -18,14 +16,22 @@
         android:contentDescription="@string/button_tutorial"
         android:src="@drawable/doc" />
 
-    <ImageButton
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="468dp"
         android:layout_gravity="center"
-        android:layout_marginTop="185dp"
-        android:background="?android:selectableItemBackground"
-        android:contentDescription="@string/button_start"
-        android:src="@drawable/play" />
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="@string/button_start"
+            android:src="@drawable/play" />
+
+    </LinearLayout>
+
 
 
 </LinearLayout>
