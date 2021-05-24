@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EduWash</string>
+    <string name="button_start">Button Start</string>
+    <string name="button_tutorial">Button Tutorial</string>
+</resources>
