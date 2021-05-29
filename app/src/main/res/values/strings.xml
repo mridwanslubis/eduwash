@@ -2,4 +2,15 @@
     <string name="app_name">EduWash</string>
     <string name="button_start">Button Start</string>
     <string name="button_tutorial">Button Tutorial</string>
+    <string name="title_activity_pager">PagerActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="prev">Previous</string>
+    <string name="get_started">Get started</string>
+    <string name="lets_try">Lets Try</string>
+    <string name="onboarding_slide1_desc">An educational application for children about the importance of washing hands properly</string>
+    <string name="onboarding_slide2_desc">Trough machine learning, we are introducing live technology to detecting your handwash movement. Feel so futuristic right!</string>
+    <string name="onboarding_slide3_desc">Supported by cloud technology, this app is running on the cloud so it really lightweight in your device!</string>
 </resources>

@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bgActivity">#E5F4F7</color>
+    <color name="colorGrey">#C9C9C9</color>
+    <color name="colorPurple">#6c63ff</color>
+    <color name="colorGreen">#64dd17</color>
+    <color name="colorIndigo">#303F9F</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorBlueMidnight">#003366</color>
 </resources>

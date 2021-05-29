@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/buttonTutor"
+        android:id="@+id/buttonPractice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
