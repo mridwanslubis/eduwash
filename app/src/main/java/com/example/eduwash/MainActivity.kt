@@ -3,6 +3,8 @@ package com.example.eduwash
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.example.eduwash.config.AppPrefs
 import com.example.eduwash.view.OnBoardingActivity
 import com.example.eduwash.view.PracticeActivity
@@ -21,6 +23,29 @@ class MainActivity : AppCompatActivity() {
         buttonPractice.setOnClickListener {
             startActivity(Intent(this, PracticeActivity::class.java))
             finish()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setMode(selectedMode: Int) {
+        when (selectedMode) {
+            R.id.about_developer -> {
+                //val moveIntent = Intent(this@MainActivity, AboutMe::class.java)
+                //startActivity(moveIntent)
+            }
+
+            R.id.change_language -> {
+
+            }
         }
     }
 }

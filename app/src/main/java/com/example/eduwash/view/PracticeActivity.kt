@@ -5,16 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.widget.TextView
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.example.eduwash.MainActivity
 import com.example.eduwash.R
 import com.example.eduwash.config.AppPrefs
 import com.example.eduwash.hide
 import com.example.eduwash.show
-import kotlinx.android.synthetic.main.activity_on_boarding.*
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_on_boarding.nextBtn
-import kotlinx.android.synthetic.main.activity_on_boarding.startBtn
 import kotlinx.android.synthetic.main.activity_practice.*
+import kotlinx.android.synthetic.main.practice_slide1.*
+import kotlinx.android.synthetic.main.practice_slide2.*
+import kotlinx.android.synthetic.main.practice_slide3.*
+import pl.droidsonroids.gif.GifDrawable
+import java.io.File
 
 class PracticeActivity : AppCompatActivity() {
 
@@ -53,16 +58,49 @@ class PracticeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_practice)
 
+
+        retrieveGifAsset()
         init()
         dataSet()
         interaction()
+    }
+
+    private fun retrieveGifAsset() {
+        val gifImage = FirebaseStorage.getInstance().reference.child("gif/step1.gif")
+        val gifImage2 = FirebaseStorage.getInstance().reference.child("gif/step2_left.gif")
+        val gifImage2Right = FirebaseStorage.getInstance().reference.child("gif/step2_right.gif")
+        val localFile = File.createTempFile("tempGif", "gif")
+        val localFile2 = File.createTempFile("tempGif2", "gif")
+        val localFile2Right = File.createTempFile("tempGif2Right", "gif")
+
+        gifImage.getFile(localFile).addOnSuccessListener {
+            val gifFromPath = GifDrawable(localFile.absolutePath)
+            img.setImageDrawable(gifFromPath)
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to retrieve the image", Toast.LENGTH_SHORT).show()
+        }
+
+        gifImage2.getFile(localFile2).addOnSuccessListener {
+            val gif2FromPath = GifDrawable(localFile2.absolutePath)
+            img2.setImageDrawable(gif2FromPath)
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to retrieve the image", Toast.LENGTH_SHORT).show()
+        }
+
+        gifImage2Right.getFile(localFile2Right).addOnSuccessListener {
+            val gif2RightFromPath = GifDrawable(localFile2Right.absolutePath)
+            img2Right.setImageDrawable(gif2RightFromPath)
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to retrieve the image", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun init() {
         layouts = arrayOf(
             R.layout.practice_slide1,
             R.layout.practice_slide2,
-            R.layout.practice_slide3
+            R.layout.practice_slide3,
+                R.layout.practice_slide4
         )
         sliderAdapter = SliderAdapter(this, layouts)
     }
