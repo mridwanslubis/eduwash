@@ -16,6 +16,16 @@
     <string name="about_developer">About developer</string>
     <string name="change_language">Change language</string>
     <string name="step_1">Step 1</string>
-    <string name="step_2">Step 2</string>
+    <string name="step_2">Step 2 - Left</string>
+    <string name="step_2R">Step 2 - Right</string>
     <string name="step_3">Step 3</string>
+    <string name="step_4">Step 4 - Left</string>
+    <string name="step_4R">Step 4 - Right</string>
+    <string name="step_5">Step 5 - Left</string>
+    <string name="step_5R">Step 5 - Right</string>
+    <string name="step_6">Step 6 - Left</string>
+    <string name="step_6R">Step 6 - Right</string>
+    <string name="step_7">Step 7 - Left</string>
+    <string name="step_7R">Step 7 - Right</string>
+
 </resources>
