@@ -27,5 +27,13 @@
     <string name="step_6R">Step 6 - Right</string>
     <string name="step_7">Step 7 - Left</string>
     <string name="step_7R">Step 7 - Right</string>
+    <string name="caption1">Rub both of your palm until the soap spreads evenly</string>
+    <string name="caption2">Rub both of your back hands using the opposite of your palm</string>
+    <string name="caption3">Scrub between your finger by interlacing your fingers and moving it with back and forth motion</string>
+    <string name="caption4">Clean the back of your fingers by rubbing it interlocked fingers in your palm. Repeat this motion for both of your hands</string>
+    <string name="caption5">Rub your thumbs circularly by starts rubbing it in your index hand</string>
+    <string name="caption6">Clean your fingertip using your opposite palm with circular motion</string>
+    <string name="caption7">Rub each of your wrist by using your opposite hand</string>
+
 
 </resources>
